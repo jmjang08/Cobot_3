@@ -1,0 +1,8 @@
+<library path="tiago_isaac_ros2_control">
+  <class
+    name="tiago_isaac_ros2_control/IsaacSystem"
+    type="tiago_isaac_ros2_control::IsaacSystem"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>ROS2 Control SystemInterface bridging JointState topics to Isaac</description>
+  </class>
+</library>

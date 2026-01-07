@@ -1,0 +1,67 @@
+repositories:
+  external/tiago_isaac:
+    type: git
+    url: https://github.com/AIS-Bonn/tiago_isaac.git
+    version: main
+  external/urdf_test:
+    type: git
+    url: https://github.com/pal-robotics/urdf_test.git
+    version: humble-devel
+  external/pal_urdf_utils:
+    type: git
+    url: https://github.com/pal-robotics/pal_urdf_utils.git
+    version: humble-devel
+  external/launch_pal:
+    type: git
+    url: https://github.com/pal-robotics/launch_pal.git
+    version: master
+  external/pal_gazebo_worlds:
+    type: git
+    url: https://github.com/pal-robotics/pal_gazebo_worlds.git
+    version: humble-devel
+  external/play_motion2:
+    type: git
+    url: https://github.com/pal-robotics/play_motion2.git
+    version: humble-devel
+
+  external/pmb2_robot:
+    type: git
+    url: https://github.com/pal-robotics/pmb2_robot.git
+    version: humble-devel
+  external/pmb2_navigation:
+    type: git
+    url: https://github.com/pal-robotics/pmb2_navigation.git
+    version: humble-devel
+  external/pal_navigation_cfg_public:
+    type: git
+    url: https://github.com/pal-robotics/pal_navigation_cfg_public.git
+    version: humble-devel
+
+  external/tiago_robot:
+    type: git
+    url: https://github.com/C-2-Organization/tiago_dual_robot.git
+    version: isaac-compatibility
+  external/tiago_navigation:
+    type: git
+    url: https://github.com/pal-robotics/tiago_navigation.git
+    version: humble-devel
+  external/tiago_simulation:
+    type: git
+    url: https://github.com/pal-robotics/tiago_simulation.git
+    version: humble-devel
+  external/pal_hey5:
+    type: git
+    url: https://github.com/pal-robotics/pal_hey5.git
+    version: humble-devel
+  external/pal_gripper:
+    type: git
+    url: https://github.com/pal-robotics/pal_gripper.git
+    version: humble-devel
+  external/pal_robotiq_gripper:
+    type: git
+    url: https://github.com/pal-robotics/pal_robotiq_gripper.git
+    version: humble-devel
+  external/tiago_moveit_config:
+    type: git
+    url: https://github.com/C-2-Organization/tiago_dual_moveit_config
+    version: isaac-sim-compatible

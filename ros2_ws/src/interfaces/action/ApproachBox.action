@@ -1,0 +1,19 @@
+# Goal
+float32 stop_distance        # meters (e.g. 0.5)
+float32 timeout_sec          # seconds (e.g. 20.0)
+float32 min_confidence       # optional (not used if point already filtered)
+bool    align_first          # rotate first then approach
+
+---
+# Result
+bool success
+string message
+geometry_msgs/PointStamped final_point_cam   # last seen box point in camera frame
+
+---
+# Feedback
+float32 x_cam            # meters
+float32 z_cam            # meters
+float32 distance_error   # z - stop_distance
+float32 angle_error      # proxy error from x (radians-ish), just for display
+string  state            # "ALIGNING" / "APPROACHING" / "ARRIVED" / "NO_TARGET"

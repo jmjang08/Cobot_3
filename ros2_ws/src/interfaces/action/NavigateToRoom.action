@@ -1,0 +1,12 @@
+# Goal
+string room_id            # e.g. "1301"
+bool use_orientation       # true면 YAML orientation 사용, false면 yaw만/혹은 기본값 사용
+---
+# Result
+bool success
+string message
+geometry_msgs/PoseStamped target_pose
+---
+# Feedback
+string state              # "LOOKUP", "SENDING", "RUNNING", "SUCCEEDED", "FAILED"
+float32 distance_remaining # nav2 feedback에서 전달 (없으면 -1)

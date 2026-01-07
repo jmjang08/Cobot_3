@@ -1,0 +1,15 @@
+# interfaces/action/LiftBox.action
+#
+# Goal
+float32 timeout_sec
+float32 stage_timeout_sec
+float32 init_move_time_sec
+bool   init_only
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string stage
+float32 progress

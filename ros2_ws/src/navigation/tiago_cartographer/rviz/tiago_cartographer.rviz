@@ -1,0 +1,96 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /LaserScan1/Topic1
+      Splitter Ratio: 0.4
+    Tree Height: 347
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /Publish Point1
+      - /2D Pose Estimate1
+    Name: Tool Properties
+    Splitter Ratio: 0.58
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 0; 0                      # 전방 레이저는 빨간색
+      Color Transformer: Intensity
+      Enabled: true
+      Name: LaserScan (Front)
+      Size (Pixels): 3
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /scan_front_raw              # 전방 레이저 토픽
+      Use Fixed Frame: true
+    - Alpha: 1
+      Class: rviz_default_plugins/LaserScan
+      Color: 0; 255; 0                      # 후방 레이저는 초록색
+      Color Transformer: Intensity
+      Enabled: true
+      Name: LaserScan (Rear)
+      Size (Pixels): 3
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /scan_rear_raw               # 후방 레이저 토픽
+      Use Fixed Frame: true
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Odometry
+      Enabled: true
+      Name: Odometry
+      Topic:
+        Value: /odom
+      Value: true
+    - Alpha: 0.7
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Enabled: true
+      Name: Map
+      Topic:
+        Value: /map
+      Update Topic:
+        Value: /map_updates
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/PointCloud2
+      Enabled: true
+      Name: Cartographer Points
+      Topic:
+        Value: /scan_matched_points2
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic: /initialpose
+Window Geometry:
+  Height: 800
+  Width: 1200

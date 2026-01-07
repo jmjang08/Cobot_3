@@ -1,0 +1,18 @@
+# DropBox.action
+# 박스를 테이블 위에 내려놓는 시퀀스
+
+# Goal
+float32 timeout_sec           # 전체 타임아웃 (초), <=0이면 기본값 사용
+float32 stage_timeout_sec     # 각 스테이지 타임아웃 (초), <=0이면 기본값 사용
+float32 approach_distance_m   # 테이블 접근 거리 (m), <=0이면 기본값 사용
+float32 backup_distance_m     # 후진 거리 (m), <=0이면 기본값 사용
+
+---
+# Result
+bool success
+string message
+
+---
+# Feedback
+string stage      # 현재 스테이지 이름
+float32 progress  # 0.0 ~ 1.0
