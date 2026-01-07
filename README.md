@@ -173,7 +173,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/Cobot_3/ros2_ws/src/isaacsim_setup/m
 
 ### 4. Run Project
 
-Launch the main bringup file:
+Press **Play** button on Isaac sim and launch the main bringup file:
 
 ```bash
 ros2 launch orchestrator tiago_bringup.launch.py
