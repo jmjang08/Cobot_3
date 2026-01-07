@@ -56,9 +56,9 @@ Cobot_3/
 * **OS**: Ubuntu 22.04 (Jammy Jellyfish)
 * **GPU**: NVIDIA RTX GPU (RTX 30-series / A-series or higher recommended)
 * **NVIDIA Driver**: Version 550.x or higher
-* **NVIDIA Isaac Sim**: 5.0.0
-* **ROS 2**: Humble Hawksbill
-* **Python**: 3.10
+* **NVIDIA Isaac Sim 5.0.0**
+* **ROS2 Humble Hawksbill**
+* **Python 3.10+**
 
 ---
 
@@ -112,7 +112,7 @@ export ROS_DOMAIN_ID=110
 ```
 
 > [!TIP]
-> **If you are using a custom ID**, search for **"ros2_context"** in the Isaac Sim Stage window and ensure the Domain ID there matches your environment variable.
+> **If you are using a custom domain ID**, search for **"ros2_context"** in the Isaac Sim Stage window and ensure the Domain ID there matches your environment variable.
 
 To verify that the Domain ID is set correctly, run `ros2 topic list` in your terminal. You should see the following topics:
 
@@ -148,13 +148,28 @@ source install/setup.bash
 
 ### 3. Create map.yaml (Optional)
 
-If you want to generate a new map:
+If you want to generate your own map:
 
-1. **Controller**: `python3 tiago_example_controller.py`
-2. **SLAM**: `ros2 launch tiago_cartographer tiago_cartographer.launch.py` <br>
-Use the controller to teleoperate the robot so that it can scan all surrounding walls and surfaces.
-3. **Save**: `ros2 run nav2_map_server map_saver_cli -f ~/map` <br>
-Move the generated map files to: `Cobot_3/ros2_ws/src/isaacsim_setup/maps/`.
+**A. Controller:**
+```bash
+cd ros2_ws/external/tiago_isaac
+python3 tiago_example_controller.py
+```
+**B. SLAM:**
+```bash
+# (First time Only)
+sudo apt update
+sudo apt install ros-humble-cartographer ros-humble-cartographer-ros -y
+```
+```bash
+ros2 launch tiago_cartographer tiago_cartographer.launch.py
+```
+Use the controller to teleoperate the robot so that it can scan all surrounding walls and surfaces.<br>
+
+**C. Save map.pgm/yaml:**
+```bash
+ros2 run nav2_map_server map_saver_cli -f ~/Cobot_3/ros2_ws/src/isaacsim_setup/maps/map
+```
 
 ### 4. Run Project
 
@@ -194,8 +209,12 @@ This project utilizes the **PAL Robotics TIAGo++**:
 This project is licensed under the **Apache License 2.0**.  
 Feel free to use, modify, and distribute this software under the terms of the Apache License.
 
-**⚠️ Important Notes on Dependencies:**
-
-* **tiago_isaac**: This dependency is licensed under **AGPL-3.0**.
-* **map.usd**: Redistribution of the original world file is **strictly prohibited** as per the creator's terms.  
-  (Source: ["Apartment hallways, elevators and stairs" by orange1718(프레피)](https://www.acon3d.com/ko/product/1000009405))
+**⚠️ Important Notes on Dependencies**<br>
+This project integrates several third-party repositories. Each maintains its own license terms.
+* **Core Project**: Apache License 2.0
+* **External Dependencies**:
+    * **tiago_isaac**: [AGPL-3.0 License](https://github.com/AIS-Bonn/tiago_isaac.git) 
+    * **PAL Robotics Repositories**: Most are licensed under [Apache License 2.0] or [BSD-3-Clause] (e.g., `pmb2_robot`, `tiago_robot`)
+    * **urdf_test / launch_pal**: Licensed under [Apache License 2.0]. 
+    * **map.usd**: Redistribution of the original world file is **strictly prohibited** as per the creator's terms.  
+      (Source: ["Apartment hallways, elevators and stairs" by orange1718(프레피)](https://www.acon3d.com/ko/product/1000009405))

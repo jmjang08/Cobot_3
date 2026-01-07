@@ -1,6 +1,4 @@
-# ====================
-# OS generated files
-# ====================
+# == OS generated files ==
 .DS_Store
 .DS_Store?
 ._*
@@ -10,9 +8,7 @@ ehthumbs.db
 Thumbs.db
 *~
 
-# ====================
-# IDE / Editor
-# ====================
+# == IDE / Editor ==
 .vscode/
 .idea/
 *.swp
@@ -20,14 +16,12 @@ Thumbs.db
 *.sublime-workspace
 *.sublime-project
 
-# ====================
-# Python
-# ====================
+# == Python & Virtual Environments ==
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
+.python-version
 build/
 develop-eggs/
 dist/
@@ -61,14 +55,10 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# ====================
-# ROS2 Workspace
-# ====================
+# == ROS2 Workspace ==
 ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
-*.pyc
-*.pyo
 
 # ROS bag files
 *.bag
@@ -76,39 +66,20 @@ ros2_ws/log/
 *.db3-shm
 *.db3-wal
 
-# ====================
-# External Dependencies (vcs import)
-# ====================
-external/
-
-# Symbolic links to external packages
-ros2_ws/src/tiago_rviz2
-
-# ====================
-# Isaac Sim
-# ====================
+# == Isaac Sim & NVIDIA Omniverse ==
 .isaac_sim/
 _isaac_sim/
+.nvidia-omniverse/
+.recorded_samples/
+kit/logs/
+*.usd.snav
 *.cache
-*.tmp
 
-# Generated USD files (keep source, ignore compiled)
+# Generated USD files
 *.usdc
 *.usdz
 
-# Nucleus local cache
-.nvidia-omniverse/
-
-# Isaac Sim logs
-kit/logs/
-
-# ====================
-# Docker
-# ====================
-.docker/
-*.dockerfile.bak
-
-# Training artifacts
+# == Training & Data ==
 runs/
 wandb/
 mlruns/
@@ -116,13 +87,11 @@ lightning_logs/
 checkpoints/
 runs_tiago_box/
 
-# Dataset (should be downloaded separately)
+# Dataset
 data/
 datasets/
 
-# ====================
-# Build artifacts
-# ====================
+# == Build artifacts & External ==
 *.o
 *.a
 *.so
@@ -137,58 +106,39 @@ cmake_install.cmake
 Makefile
 compile_commands.json
 
-# ====================
-# Logs and temp files
-# ====================
+# External Dependencies
+external/
+ros2_ws/src/tiago_rviz2
+
+# == Logs, Temp, and Backups ==
 *.log
 logs/
 tmp/
 temp/
 *.bak
 *.backup
+*.tmp
+*.usd.bak
+*.usd.tmp
 
-# ====================
-# Secrets and configs
-# ====================
+# == Secrets and configs ==
 .env
 .env.local
 .env.*.local
-*.pem
-*.key
-secrets/
-credentials/
 
-# ====================
-# Documentation build
-# ====================
+# == Documentation & Assets ==
 docs/_build/
 docs/site/
-
-# ====================
-# Misc
-# ====================
 *.zip
 *.tar.gz
 *.rar
 *.7z
 
-# Large files (maps, point clouds)
+# Large files
 *.pcd
 *.ply
 *.las
 *.laz
 
-# ====================
-# Project Specific (COBOT_3)
-# ====================
-# Ignore generated QR code images
+# == Project Specific ==
 ros2_ws/src/isaacsim_setup/maps/qr_images/*.png
-
-# Isaac Sim additional temp files
-*.usd.bak
-*.usd.tmp
-*.usd.snav
-.recorded_samples/
-
-# Local python versioning
-.python-version
