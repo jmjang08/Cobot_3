@@ -5,6 +5,8 @@
 
 An autonomous indoor delivery robot system for apartment buildings, built with **NVIDIA Isaac Sim** and **ROS2**.
 
+## 🎬 Demo Video
+[![TIAGo Delivery Robot Demo](https://img.youtube.com/vi/pJ6_7Ozuyxw/maxresdefault.jpg)](https://www.youtube.com/watch?v=pJ6_7Ozuyxw)
 ---
 
 ## 🌟 Overview
