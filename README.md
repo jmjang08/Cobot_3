@@ -119,6 +119,7 @@ export ROS_DOMAIN_ID=110
 To verify that the Domain ID is set correctly, run `ros2 topic list` in your terminal. You should see the following topics:
 
 ```bash
+user@pc:~$ ros2 topic list
 /clock
 /cmd_vel
 /gemini2/color/camera_info
